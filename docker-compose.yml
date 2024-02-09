@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  react-app:
+    container_name: react-app
+    build: ./react
+    volumes:
+      - ./react:/usr/src/app
+    command: sh -c "cd react-app && yarn start"
+    ports:
+      - 3000:3000
+    stdin_open: true
+  go:
+    container_name: go-api
+    build: ./go
+    volumes:
+      - ./go:/api
+    ports:
+      - 8888:8888
+    tty: true
+  
