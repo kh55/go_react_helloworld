@@ -6,3 +6,6 @@ docker-compose run --rm react sh -c 'npx create-react-app react-app --template t
 
 # コンテナ直下にreactプロジェクトを作成する場合
 docker-compose run --rm react-app sh -c 'npx create-react-app . --template typescript'
+
+# nextjsをインストール
+docker-compose run --rm react-app sh -c 'npx create-next-app .'

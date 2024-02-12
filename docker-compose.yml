@@ -19,6 +19,7 @@ services:
       dockerfile: DockerfileGo
     volumes:
       - ./go:/api
+    command: sh -c "go run main.go"
     ports:
-      - 8888:8888
+      - 3001:3001
     tty: true
