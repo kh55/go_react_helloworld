@@ -5,6 +5,7 @@ import (
 	"github.com/gin-contrib/cors"
 	"time"
 	"log"
+	"go-sample/controller"
 )
 
 func main() {
@@ -37,10 +38,9 @@ func main() {
 		// preflightリクエストの結果をキャッシュする時間
 		MaxAge: 24 * time.Hour,
 	  }))
-	r.GET("/hello", func(context *gin.Context) {
-		context.JSON(200, gin.H{
-			"message": "Hello World!",
-		})
-	})
+	
+	r.GET("/", controller.Index)
+	r.GET("/hello", controller.Hello)
+	r.GET("/redis", controller.RedisTest)
 	log.Fatal(r.Run(":3001"))
 }

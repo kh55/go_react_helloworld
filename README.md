@@ -9,3 +9,10 @@ docker-compose run --rm react-app sh -c 'npx create-react-app . --template types
 
 # nextjsをインストール
 docker-compose run --rm react-app sh -c 'npx create-next-app .'
+
+# env
+
+REDIS_ADDR: redis
+REDIS_PORT: 6379
+REDIS_DB: 0
+REDIST_PASSWORD: ""
