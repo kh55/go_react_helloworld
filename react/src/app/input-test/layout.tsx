@@ -8,7 +8,7 @@ export default function Layout({
         <hr />
         <div>{children}</div>
         <hr />
-        <p>input-test layout</p>
+        <p>個別レイアウト</p>
       </>
     )
   }

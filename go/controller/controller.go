@@ -81,6 +81,6 @@ func RedisInput(context *gin.Context) {
 	fmt.Println("key:", val)
 
 	context.JSON(http.StatusOK, gin.H{
-		"message": val,
+		"response_message": val,
 	})
 }
