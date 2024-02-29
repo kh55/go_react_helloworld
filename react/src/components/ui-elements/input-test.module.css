@@ -1,0 +1,15 @@
+.inputbox{
+    color:gray;
+    padding: 10px;
+    margin:20px;
+    border-radius: 10px;
+    width:300px;
+    font-size:2rem;
+}
+
+.sendbtn{
+    color:black;
+    background-color:lightgray;
+    padding:10px 20px;
+    border-radius: 10px;
+}

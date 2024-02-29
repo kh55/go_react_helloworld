@@ -23,3 +23,19 @@ services:
     ports:
       - 3001:3001
     tty: true
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+  phpredisadmin:
+    image: erikdubbelboer/phpredisadmin:latest
+    ports:
+      - "8980:80"
+    environment:
+      REDIS_1_HOST: redis
+volumes:
+  redis-data:
+    driver: local
+    
