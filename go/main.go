@@ -42,5 +42,6 @@ func main() {
 	r.GET("/", controller.Index)
 	r.GET("/hello", controller.Hello)
 	r.GET("/redis", controller.RedisTest)
+	r.POST("/input", controller.RedisInput)
 	log.Fatal(r.Run(":3001"))
 }
