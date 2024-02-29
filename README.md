@@ -1,3 +1,9 @@
+# コンテナ
+go
+react
+redis
+phpredisadmin
+
 ## build
 docker-compose build
 
